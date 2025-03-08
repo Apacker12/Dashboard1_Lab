@@ -21,6 +21,7 @@ if category_filter != 'All':
 
 # KPIs
 st.title("E-commerce Sales Dashboard")
+
 # Create columns for metrics
 col1,col2=st.columns(2)
 with col1:
@@ -28,9 +29,13 @@ with col1:
 with col2:
     st.metric("Total Orders", len(df))
 
-# Data Table
-st.subheader("Sales Data")
-st.dataframe(df)
+# Create columns for metrics
+col1, col2=st.columns(2)
+with col1:
+    # Data Table
+    st.subheader("Sales Data")
+with col2:
+    st.dataframe(df)
 
 # Chart
 st.subheader("Sales by Category")
